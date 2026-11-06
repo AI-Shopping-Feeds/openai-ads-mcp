@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# --- Credentials, local config and tool output ---
+# Never commit Ads API keys, Conversions API keys, SFTP passwords or signing secrets.
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.p8
+*token*.json
+*key*.json
+# Audit logs written by the server (may contain ad account data)
+logs/
+*.jsonl
+*.jsonl.tmp
+# Report exports, if you save any by hand
+reports/
+*.csv
+# Tool caches, build output and OS files
+.venv/
+.venv-*/
+venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+.DS_Store
