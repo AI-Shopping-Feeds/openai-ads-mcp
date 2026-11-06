@@ -436,7 +436,8 @@ async def test_local_upload_stays_inside_upload_dir(config: Config, tmp_path: Pa
 async def test_upload_audience_file_returns_create_fields(config: Config, tmp_path: Path) -> None:
     uploads = tmp_path / "uploads"
     uploads.mkdir()
-    (uploads / "list.csv").write_text("email\nperson@example.com\n")
+    # Bytes, so Windows doesn't turn \n into \r\n and change the size.
+    (uploads / "list.csv").write_bytes(b"email\nperson@example.com\n")
     route = respx.post(f"{BASE}/uploads").mock(
         return_value=httpx.Response(200, json={"file_id": "f1"})
     )

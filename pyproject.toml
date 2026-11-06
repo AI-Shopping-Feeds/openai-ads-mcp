@@ -47,6 +47,8 @@ dependencies = [
     "httpx>=0.28.1",
     "python-dotenv>=1.2.4",
     "click>=8.5.0",
+    # Windows has no system time zone database; zoneinfo needs this for account time zones.
+    "tzdata>=2026.6; sys_platform == 'win32'",
 ]
 
 [project.optional-dependencies]
