@@ -46,7 +46,7 @@ dependencies = [
     "mcp>=2.3.0,<3",
     "httpx>=0.28.1",
     "python-dotenv>=1.2.4",
-    "click>=8.5.0",
+    "click>=8.5.1",
     # Windows has no system time zone database; zoneinfo needs this for account time zones.
     "tzdata>=2026.6; sys_platform == 'win32'",
 ]
@@ -55,7 +55,7 @@ dependencies = [
 test = [
     "pytest>=9.2.0",
     "pytest-cov>=7.1.0",
-    "pytest-asyncio>=1.4.1",
+    "pytest-asyncio>=1.4.1.post1",
     "respx>=0.23.1",
 ]
 dev = [
